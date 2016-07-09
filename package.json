@@ -1,0 +1,16 @@
+{
+  "name": "noise",
+  "version": "0.0.0",
+  "description": "a drum machine, probably",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alex birdsall <ambirdsall@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^13.0.1",
+    "lodash": "^4.13.1",
+    "watchify": "^3.7.0"
+  }
+}
