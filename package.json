@@ -4,13 +4,23 @@
   "description": "a drum machine, probably",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "",
+    "watch": "watchify index.js -o bundle.js"
   },
   "author": "alex birdsall <ambirdsall@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "browserify": "^13.0.1",
-    "lodash": "^4.13.1",
     "watchify": "^3.7.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ambirdsall/noise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ambirdsall/noise/issues"
+  },
+  "homepage": "https://github.com/ambirdsall/noise#readme"
 }
