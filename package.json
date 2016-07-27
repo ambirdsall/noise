@@ -5,16 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "",
-    "watch": "watchify index.js -o bundle.js"
+    "serve": "node_modules/serve/bin/serve -p 1234",
+    "watch": "watchify index.js -o bundle.js",
+    "dev": "npm run serve & npm run watch"
   },
   "author": "alex birdsall <ambirdsall@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "browserify": "^13.0.1",
+    "browserify-zepto": "^1.1.4",
     "watchify": "^3.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "serve": "^1.4.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ambirdsall/noise.git"

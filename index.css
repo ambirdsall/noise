@@ -1,5 +1,9 @@
-[id=foo] {
+.button {
   height: 7em;
   width: 7em;
-  background: #9a3459;
+  margin: 2em;
+  border: 1px solid #9a3459;
+  border-radius: 1em;
+  display: inline-block;
+  box-shadow: 0px 0px 5px 0px #420008;
 }

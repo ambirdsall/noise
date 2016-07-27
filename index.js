@@ -1,6 +1,16 @@
-tn =
-  require('./j/tones')
+$ = require('browserify-zepto')
+tn = require('./j/tones')
 
-tn.play('a')
-  .play('c')
-  .play('e')
+$('#chord').click(function() {
+  tn.play('a')
+    .play('c')
+    .play('e')
+    .play('g')
+})
+
+$('#melody').click(function() {
+  tn.play('a')
+  tn.play('c')
+  tn.play('e')
+  tn.play('g')
+})
