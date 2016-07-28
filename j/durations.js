@@ -1,6 +1,17 @@
-var _ =
-  require('lodash')
+var _ = require('lodash/fp')
+var durations = {}
 
-// In combinatorial terms, I suppose I want to build a bluebird: a higher-order
-// function that takes a set of functions which play notes/chords and calls
-// them in sequence
+var withDuration = _.curry(function(duration, note) {
+  return [note, duration]
+})
+var withDurationList = _.curry(function(duration, notes) {
+  var durations = _.map(function() { return duration })(notes)
+  return [notes, durations]
+})
+
+durations.asQuarterNotes = _.map(withDuration('4n'))
+durations.withQuarterNotes = withDurationList('4n')
+durations.asEighthNotes = _.map(withDuration('8n'))
+durations.withEighthNotes = withDurationList('8n')
+
+module.exports = durations
