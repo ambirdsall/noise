@@ -1,16 +1,24 @@
-$ = require('browserify-zepto')
-tn = require('./j/tones')
+var $ = require('browserify-zepto')
+var Tone = require('tone')
+
+var mono = new Tone.Synth().toMaster()
+var poly = new Tone.PolySynth(10, Tone.Synth).toMaster()
 
 $('#chord').click(function() {
-  tn.play('a')
-    .play('c')
-    .play('e')
-    .play('g')
+  poly.triggerAttackRelease(
+    [ 'a4'
+    , 'c4'
+    , 'e4'
+    , 'g4'
+    ]
+  , [ '2n'
+    , '2n'
+    , '8n'
+    , '2n'
+    ]
+  )
 })
 
 $('#melody').click(function() {
-  tn.play('a')
-  tn.play('c')
-  tn.play('e')
-  tn.play('g')
+  mono.triggerAttackRelease('a4', '2n')
 })
