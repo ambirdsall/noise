@@ -1,5 +1,6 @@
-var $ = require('browserify-zepto')
-var Tone = require('tone')
+window._ = require('lodash/fp')
+window.$ = require('browserify-zepto')
+window.Tone = require('tone')
 
 var mono = new Tone.Synth().toMaster()
 var poly = new Tone.PolySynth(10, Tone.Synth).toMaster()
