@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node_modules/serve/bin/serve -p 1234",
-    "watch": "watchify index.js -o bundle.js",
-    "dev": "npm run serve & npm run watch"
+    "serve": "live-server --port=1234",
+    "watch": "watchify index.js -o bundle.js -d",
+    "dev": "npm run watch & npm run serve"
   },
   "author": "alex birdsall <ambirdsall@gmail.com>",
   "license": "ISC",
@@ -19,7 +19,7 @@
     "watchify": "^3.7.0"
   },
   "devDependencies": {
-    "serve": "^1.4.0"
+    "live-server": "^1.0.0"
   },
   "repository": {
     "type": "git",
